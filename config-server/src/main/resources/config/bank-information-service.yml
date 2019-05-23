@@ -1,0 +1,38 @@
+server:
+  port: 8091
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  shareSecurityContext: true
+
+client:
+  id: clientId
+  password: password
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  security:
+    enabled: false
+
+auth-server:
+  url: http://localhost:9999
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8000

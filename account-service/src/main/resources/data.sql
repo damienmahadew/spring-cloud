@@ -1,0 +1,5 @@
+INSERT INTO ACCOUNTS VALUES (1, 'Damien', 'Mahadew');
+INSERT INTO ACCOUNTS VALUES (2, 'Darth', 'Vader');
+INSERT INTO ACCOUNTS VALUES (3, 'Petre', 'Parker');
+INSERT INTO ACCOUNTS VALUES (4, 'Bruce', 'Wayne');
+INSERT INTO ACCOUNTS VALUES (5, 'Tony', 'Stark');

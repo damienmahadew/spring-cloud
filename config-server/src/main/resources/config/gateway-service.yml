@@ -1,0 +1,27 @@
+server:
+  port: 8060
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+              
+zuul:
+  routes:
+    account:
+      sensitiveHeaders:
+      path: /account/**
+      serviceId: account-service
+    bank-information:
+      sensitiveHeaders:
+      path: /bank-information/**
+      serviceId: bank-information-service
+  auth-server:
+    sensitiveHeaders:
+    path: /uaa/**
+    stripPrefix: false
+    serviceId: auth-service

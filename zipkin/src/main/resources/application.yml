@@ -1,0 +1,14 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: zipkin-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+server:
+  port: 9411
+
+
+
